@@ -1,2 +1,2 @@
 # SkinAR
-Skin AR is an app is building from Lauchpad 
+Skin AR is an app built from Lauchpad 
