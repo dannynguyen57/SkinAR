@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+
 using System.Text;
 using System.Collections;
 using UnityEngine;
@@ -22,30 +22,26 @@ public class Scene : MonoBehaviour
 
         loadingScreen.SetActive(true);
 
-        yield return new WaitForSeconds(3);
+       // yield return new WaitForSeconds(3);
         
         
        
         while(!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            float progressV = Mathf.Clamp01(operation.progress / 0.9f);
            //Debug.Log(progress);
           // yield return new WaitForSeconds(3);
 
 
           
 
-           slider.value = progress;
-           progressText.text = progress * 100f + "%";
-           yield return new WaitForSeconds(3);
-           //yield return null;
+           slider.value = progressV;
+           progressText.text = progressV * 100f + "%";
+           //yield return new WaitForSeconds(3);
+           yield return null;
         }
         
-        void Update()
-        {
-            
-            
-        }
+      
         
     }
     
