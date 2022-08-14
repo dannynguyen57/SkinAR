@@ -14,25 +14,25 @@ public class DropDown : MonoBehaviour
         if (val == 0)
         {
             output.text = "A";
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (val == 1)
         {
-            output.text = "B";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            output.text = "Test 1";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (val == 2)
         {
-            output.text = "C";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+            output.text = "Test 2";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
 
         if (val == 3)
         {
-            output.text = "D";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+            output.text = "Test 3";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         }
     }
     

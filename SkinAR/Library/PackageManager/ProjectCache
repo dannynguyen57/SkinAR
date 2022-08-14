@@ -5,21 +5,97 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637953728709814501
-    m_Hash: 2627647420
+      ticks: 637960900014691937
+    m_Hash: 117127063
   m_LockFileStatus:
     m_FilePath: D:/A3/SkinAR/SkinAR/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637953728710565777
-    m_Hash: 2968851896
+      ticks: 637960900174760292
+    m_Hash: 324188461
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.ptc.vuforia.engine@file:D:\A3\SkinAR\SkinAR\Packages\com.ptc.vuforia.engine-10.9.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 10.9.3
+      source: 6
+      resolvedPath: D:\A3\SkinAR\SkinAR\Library\PackageCache\com.ptc.vuforia.engine@e63a7b2e90be-1659475701000
+      assetPath: Packages/com.ptc.vuforia.engine
+      name: com.ptc.vuforia.engine
+      displayName: Vuforia Engine AR
+      author:
+        name: PTC Inc.
+        email: 
+        url: https://developer.vuforia.com/
+      category: 
+      type: 
+      description: Vuforia Engine is the most widely used platform for AR development,
+        with support for leading phones, tablets, and eyewear. Developers can easily
+        add advanced computer vision functionality to Android, iOS, and UWP apps,
+        to create AR experiences that realistically interact with objects and the
+        environment.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 8.0.101
+        - 8.1.9
+        - 8.1.12
+        - 8.3.9
+        - 8.5.8
+        - 8.5.9
+        compatible:
+        - 8.0.101
+        - 8.1.9
+        - 8.1.12
+        - 8.3.9
+        - 8.5.8
+        - 8.5.9
+        verified: 
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - vuforia
+      - engine
+      - ar
+      - xr
+      - augmented
+      - reality
+      - sdk
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.15.13
       testable: 0
       isDirectDependency: 1
@@ -1065,6 +1141,7 @@ m_PackageAssets:
         - 5.0.0-pre.8
         - 5.0.0-pre.9
         - 5.0.0-pre.12
+        - 5.0.0-pre.13
         compatible:
         - 1.0.0-preview.24
         - 2.0.2
@@ -1311,6 +1388,7 @@ m_PackageAssets:
         - 5.0.0-pre.8
         - 5.0.0-pre.9
         - 5.0.0-pre.12
+        - 5.0.0-pre.13
         compatible:
         - 1.0.0-preview.12
         - 1.0.0-preview.13
@@ -1582,6 +1660,7 @@ m_PackageAssets:
         - 5.0.0-pre.8
         - 5.0.0-pre.9
         - 5.0.0-pre.12
+        - 5.0.0-pre.13
         compatible:
         - 1.0.0-preview.11
         - 1.0.0-preview.12
@@ -3619,6 +3698,8 @@ m_PackageAssets:
         - 5.0.0-pre.7
         - 5.0.0-pre.8
         - 5.0.0-pre.9
+        - 5.0.0-pre.12
+        - 5.0.0-pre.13
         compatible:
         - 4.1.9
         - 4.1.10
@@ -3910,6 +3991,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3925,6 +4007,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -4002,9 +4085,11 @@ m_PackageAssets:
         - 2.1.7
         - 2.1.8
         - 2.1.9
+        - 2.1.10
         compatible:
         - 2.1.9
-        verified: 2.1.9
+        - 2.1.10
+        verified: 2.1.10
       dependencies:
       - name: com.unity.modules.vr
         version: 1.0.0
@@ -4112,6 +4197,20 @@ m_PackageAssets:
         revision: 72584ba5248fbe79e560e795ad819f876954fceb
         path: 
   m_LocalPackages:
-    m_LocalFileStatus: []
+    m_LocalFileStatus:
+    - m_FilePath: D:\A3\SkinAR\SkinAR\Packages\com.ptc.vuforia.engine-10.9.3.tgz/package.json
+      m_PathExists: 0
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 0
+      m_Hash: 0
+    - m_FilePath: D:\A3\SkinAR\SkinAR\Packages\com.ptc.vuforia.engine-10.9.3.tgz
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 637950725010000000
+      m_Hash: 1770321180
 m_ProjectPath: D:/A3/SkinAR/SkinAR/Packages
 m_EditorVersion: 2020.3.32f1 (12f8b0834f07)
