@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 10.9.3
       source: 6
-      resolvedPath: D:\A3\SkinAR\SkinAR\Library\PackageCache\com.ptc.vuforia.engine@e63a7b2e90be-1659475701000
+      resolvedPath: D:\A3\SkinAR\SkinAR\Library\PackageCache\com.ptc.vuforia.engine@e63a7b2e90be-1660502143667
       assetPath: Packages/com.ptc.vuforia.engine
       name: com.ptc.vuforia.engine
       displayName: Vuforia Engine AR
@@ -4210,7 +4210,7 @@ m_PackageAssets:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637950725010000000
+        ticks: 637960989436667933
       m_Hash: 1770321180
 m_ProjectPath: D:/A3/SkinAR/SkinAR/Packages
 m_EditorVersion: 2020.3.32f1 (12f8b0834f07)

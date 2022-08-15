@@ -36,6 +36,34 @@ public class Capture0 : MonoBehaviour
             webcamTexture.Play();
         }
     }
+
+    public void takephoto ()
+        {
+            StartCoroutine(TakePhoto());
+        }
+   
+
+    IEnumerator TakePhoto()  // Start this Coroutine on some button click
+    {
+
+    
+
+     yield return new WaitForEndOfFrame(); 
+
+    
+
+        Texture2D photo = new Texture2D(webcamTexture.width, webcamTexture.height);
+        photo.SetPixels(webcamTexture.GetPixels());
+        photo.Apply();
+
+        
+        byte[] bytes = photo.EncodeToPNG();
+        
+        File.WriteAllBytes(Application.dataPath + "/../Photo.png", bytes);
+
+       
+    }
+    
         
     
 }
