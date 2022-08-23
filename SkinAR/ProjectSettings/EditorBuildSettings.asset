@@ -6,22 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/About us.unity
-    guid: 820cd1c9c100e02418543cc574ca1f6e
-  - enabled: 1
-    path: Assets/Scenes/Selection.unity
-    guid: 0412984e9decd0d48886791ac9420161
-  - enabled: 1
-    path: Assets/Scenes/4.unity
-    guid: 56dd36e7906bd6547a6fd17a85c49321
-  - enabled: 1
-    path: Assets/Scenes/5.unity
+    path: Assets/Scenes/HomePage.unity
     guid: e0a6dc692525bf14faa6ba6375a3cdd3
   - enabled: 1
-    path: Assets/Scenes/6.unity
+    path: Assets/Scenes/LoadingPage.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Capture.unity
+    guid: 56dd36e7906bd6547a6fd17a85c49321
+  - enabled: 1
+    path: Assets/Scenes/AboutUs.unity
+    guid: 820cd1c9c100e02418543cc574ca1f6e
+  - enabled: 1
+    path: Assets/Scenes/Quizz.unity
     guid: 47ec34d6fbb992145b674067675af160
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: fdbf375c528c6104cb53b740f0a67435, type: 2}

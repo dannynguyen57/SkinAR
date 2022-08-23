@@ -6,16 +6,19 @@ using System.IO;
 
 public class Capture0 : MonoBehaviour
 {
-    [Header("Photo Taker")]
-    [SerializeField] private RawImage photodis;
+   [Header("Photo Taker")]
+   [SerializeField] private RawImage photodis;
   //  [SerializeField] private GameObject photoframe;
 
     int currentCamIndex = 0;
     public RawImage display;
+    //public RawImage display2;
     private WebCamTexture webcamTexture;
     private Texture2D photo;
     private bool viewingphoto;
+    public float Zooms = 60f;
 
+    
     public void CamClick()
     {
        // if(WebCamTexture.devices.Length > 0 )
@@ -26,7 +29,7 @@ public class Capture0 : MonoBehaviour
         //}
         currentCamIndex = (currentCamIndex + 1) %
         WebCamTexture.devices.Length;
-        // Change camera only works if the camera is
+        
         webcamTexture.Stop ();
         webcamTexture.deviceName = WebCamTexture.devices[currentCamIndex].name;
         webcamTexture.Play ();
@@ -48,6 +51,8 @@ public class Capture0 : MonoBehaviour
             webcamTexture.Play();
         }
     }
+
+   
 
     public void takephoto ()
         {
@@ -88,9 +93,26 @@ public class Capture0 : MonoBehaviour
        
     }
 
+    public void Showpic()
+    {
+        if(display != null)
+        {
+           // ShowPhoto();
+            display.texture = photo;
+        }
+        else
+        {
+            //RemovePhoto();
+            display.texture = webcamTexture;
+            webcamTexture.Play();
+        }
+
+        
+    }
+
     void ShowPhoto()
     {
-        Texture2D photo2 = new Texture2D(webcamTexture.width, webcamTexture.height);
+        //Texture2D photo2 = new Texture2D(webcamTexture.width, webcamTexture.height);
         photodis.texture = photo;
         
 
@@ -101,6 +123,8 @@ public class Capture0 : MonoBehaviour
     void RemovePhoto()
     {
         viewingphoto = false;
+        display.texture = webcamTexture;
+        webcamTexture.Play();
         
        // photoframe = false;
     }
@@ -112,6 +136,19 @@ public class Capture0 : MonoBehaviour
         webcamTexture.Play();
 
     }
+
+    
+
+    void Start()
+    {
+            //WebCamDevice device = WebCamTexture.devices[currentCamIndex];
+            webcamTexture = new WebCamTexture();
+            display.texture = webcamTexture;
+            webcamTexture.Play();
+    }
+
+    
+
 
     
     
