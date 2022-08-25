@@ -1401,7 +1401,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1289159617}
         m_TargetAssemblyTypeName: Capture0, Assembly-CSharp
-        m_MethodName: CamClick
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2099,6 +2099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photodis: {fileID: 1601758658}
   display: {fileID: 1069165415}
+  Zooms: 60
 --- !u!224 &1289159618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2259,7 +2260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 21a5d4ce7bc38644e98979cb97c240f0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
