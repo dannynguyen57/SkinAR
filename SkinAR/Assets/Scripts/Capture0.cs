@@ -16,7 +16,11 @@ public class Capture0 : MonoBehaviour
     private WebCamTexture webcamTexture;
     private Texture2D photo;
     private bool viewingphoto;
-    public float Zooms = 60f;
+    
+    
+    public GameObject skin;
+    public List<Sprite> objectList = new List<Sprite>();
+    //public float Zooms = 60f;
 
     
     public void CamClick()
@@ -90,6 +94,29 @@ public class Capture0 : MonoBehaviour
         
         File.WriteAllBytes(Application.dataPath + "/../Photo.png", bytes);
         ShowPhoto();
+        // if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        // {
+ 
+        //     Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+        //     RaycastHit hit;
+ 
+        //     Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
+ 
+        //     if (Physics.Raycast(ray, out hit))
+        //     {
+        //         if (hit.transform.tag == "skinz")
+        //         {
+        //             GameObject temp = hit.transform.gameObject;
+        //             Destroy(temp);
+        //         }
+        //     }
+        //     else
+        //     {
+        //         Touch myTouch = Input.GetTouch(0);
+        //         Showpic(myTouch);
+        //     }
+        // }
+        
        
     }
 
@@ -98,7 +125,12 @@ public class Capture0 : MonoBehaviour
         if(display != null)
         {
            // ShowPhoto();
+           
             display.texture = photo;
+           
+            
+            
+          
         }
         else
         {
@@ -145,6 +177,42 @@ public class Capture0 : MonoBehaviour
             webcamTexture = new WebCamTexture();
             display.texture = webcamTexture;
             webcamTexture.Play();
+            Debug.Log(objectList.Count);
+    }
+
+    void Update()
+    {
+ 
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+ 
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+ 
+            Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
+ 
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.tag == "skinz")
+                {
+                    GameObject temp = hit.transform.gameObject;
+                    Destroy(temp);
+                }
+            }
+            else
+            {
+                Touch myTouch = Input.GetTouch(0);
+                MakeSkin(myTouch);
+            }
+        }
+    }
+ 
+    private void MakeSkin(Touch TouchPos)
+    {
+        Vector3 objPos = Camera.main.ScreenToWorldPoint(TouchPos.position);
+            objPos.z = -1020;
+            skin.GetComponent<SpriteRenderer>().sprite = objectList[Random.Range(0, objectList.Count)];
+            Instantiate(skin, objPos, Quaternion.identity);
     }
 
     

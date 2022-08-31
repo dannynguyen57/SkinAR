@@ -5,15 +5,15 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637970412476918275
-    m_Hash: 312385361
+      ticks: 637974995386466348
+    m_Hash: 394854587
   m_LockFileStatus:
     m_FilePath: D:/A3/SkinAR/SkinAR/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637970412981222202
+      ticks: 637974995960097532
     m_Hash: 1917259542
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
