@@ -6,6 +6,8 @@ TagManager:
   tags:
   - skinz
   - popup
+  - popup2
+  - popup3
   layers:
   - Default
   - TransparentFX

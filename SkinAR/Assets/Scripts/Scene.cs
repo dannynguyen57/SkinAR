@@ -4,14 +4,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 
 public class Scene : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
-    //public TextMeshProUGUI display_name;
     public void PlayGame(int sceneIndex)
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
@@ -46,10 +44,5 @@ public class Scene : MonoBehaviour
       
         
     }
-
-    // public void Awake()
-    // {
-    //     display_name.text = "Hi " + Inputname.inputname.player_name + "!";
-    // }
     
 }
