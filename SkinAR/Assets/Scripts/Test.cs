@@ -1,22 +1,26 @@
 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class Test : MonoBehaviour
 {
 
     public List<Sprite> objectList = new List<Sprite>();
     public GameObject skin;
+    public RawImage display22;
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log(objectList.Count);
+       // DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
-    void Update()
+    public void Uupdate()
     {
  
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -50,5 +54,10 @@ public class Test : MonoBehaviour
         skin.GetComponent<SpriteRenderer>().sprite = objectList[Random.Range(0, objectList.Count)];
         Instantiate(skin, objPos, Quaternion.identity);
     }
+
+    // public void Awake()
+    // {
+    //     display22.texture = Capture0.capture.photo;
+    // }
 
 }

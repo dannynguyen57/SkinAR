@@ -1,26 +1,40 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class Capture0 : MonoBehaviour
 {
    [Header("Photo Taker")]
    [SerializeField] private RawImage photodis;
   //  [SerializeField] private GameObject photoframe;
+    public static Capture0 capture;
 
     int currentCamIndex = 0;
     public RawImage display;
     //public RawImage display2;
     private WebCamTexture webcamTexture;
-    private Texture2D photo;
+    public Texture2D photo;
     private bool viewingphoto;
     
     
-    public GameObject skin;
-    public List<Sprite> objectList = new List<Sprite>();
+    //public GameObject Skin;
+   // public List<Sprite> objectList = new List<Sprite>();
     //public float Zooms = 60f;
+
+    void Start()
+    {
+            //WebCamDevice device = WebCamTexture.devices[currentCamIndex];
+            webcamTexture = new WebCamTexture();
+            display.texture = webcamTexture;
+            webcamTexture.Play();
+           // DontDestroyOnLoad(gameObject);
+           // Debug.Log(objectList.Count);
+    }
+
 
     
     public void CamClick()
@@ -94,28 +108,7 @@ public class Capture0 : MonoBehaviour
         
         File.WriteAllBytes(Application.dataPath + "/../Photo.png", bytes);
         ShowPhoto();
-        // if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        // {
- 
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
-        //     RaycastHit hit;
- 
-        //     Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
- 
-        //     if (Physics.Raycast(ray, out hit))
-        //     {
-        //         if (hit.transform.tag == "skinz")
-        //         {
-        //             GameObject temp = hit.transform.gameObject;
-        //             Destroy(temp);
-        //         }
-        //     }
-        //     else
-        //     {
-        //         Touch myTouch = Input.GetTouch(0);
-        //         Showpic(myTouch);
-        //     }
-        // }
+        
         
        
     }
@@ -127,10 +120,8 @@ public class Capture0 : MonoBehaviour
            // ShowPhoto();
            
             display.texture = photo;
-           
-            
-            
-          
+           // SceneManager.LoadSceneAsync("Capture_1");
+                
         }
         else
         {
@@ -168,52 +159,66 @@ public class Capture0 : MonoBehaviour
         webcamTexture.Play();
 
     }
+    public void Retry2()
+    {
+        //RemovePhoto();
+        SceneManager.LoadSceneAsync("Capturee");
+        display.texture = webcamTexture;
+        webcamTexture.Play();
+
+    }
+    // private void Awake()
+    // {
+    //     if (capture == null)
+    //     {
+    //         capture = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else 
+    //     {
+    //         Destroy(gameObject);
+    //     }
+
+    // }
 
     
 
-    void Start()
-    {
-            //WebCamDevice device = WebCamTexture.devices[currentCamIndex];
-            webcamTexture = new WebCamTexture();
-            display.texture = webcamTexture;
-            webcamTexture.Play();
-            Debug.Log(objectList.Count);
-    }
+    
 
-    void Update()
-    {
+    // void Update()
+    // {
  
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
+    //     if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+    //     {
  
-            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
-            RaycastHit hit;
+    //         Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+    //         RaycastHit hit;
  
-            Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
+    //         Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
  
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.tag == "skinz")
-                {
-                    GameObject temp = hit.transform.gameObject;
-                    Destroy(temp);
-                }
-            }
-            else
-            {
-                Touch myTouch = Input.GetTouch(0);
-                MakeSkin(myTouch);
-            }
-        }
-    }
+    //         if (Physics.Raycast(ray, out hit))
+    //         {
+    //             if (hit.transform.tag == "skinz")
+    //             {
+    //                 GameObject temp = hit.transform.gameObject;
+    //                 Destroy(temp);
+    //             }
+    //         }
+    //         else
+    //         {
+    //             Touch myTouch = Input.GetTouch(0);
+    //             MakeSkin(myTouch);
+    //         }
+    //     }
+    // }
  
-    private void MakeSkin(Touch TouchPos)
-    {
-        Vector3 objPos = Camera.main.ScreenToWorldPoint(TouchPos.position);
-            objPos.z = -1020;
-            skin.GetComponent<SpriteRenderer>().sprite = objectList[Random.Range(0, objectList.Count)];
-            Instantiate(skin, objPos, Quaternion.identity);
-    }
+    // private void MakeSkin(Touch TouchPos)
+    // {
+    //     Vector3 objPos = Camera.main.ScreenToWorldPoint(TouchPos.position);
+    //         objPos.z = -1020;
+    //         skin.GetComponent<SpriteRenderer>().sprite = objectList[Random.Range(0, objectList.Count)];
+    //         Instantiate(skin, objPos, Quaternion.identity);
+    // }
 
     
 

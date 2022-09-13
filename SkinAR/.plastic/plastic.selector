@@ -1,4 +1,4 @@
-repository "SkinAR@Deakin_launchpad@cloud"
+repository "SkinAR-STOP@Deakin_launchpad@cloud"
   path "/"
-    smartbranch "/main/DannySkinAR"  
-     
+    br "/main"
+    co "/main"
