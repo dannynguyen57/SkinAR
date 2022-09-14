@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Knowledge.unity
+- path: Assets/Scenes/Capturee.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

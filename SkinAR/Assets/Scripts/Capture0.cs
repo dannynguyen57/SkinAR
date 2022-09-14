@@ -60,6 +60,8 @@ public class Capture0 : MonoBehaviour
                 if(!viewingphoto)
                 {
                     StartCoroutine(TakePhoto());
+                    
+                    
                 }
                 else
                 {
@@ -78,6 +80,7 @@ public class Capture0 : MonoBehaviour
     
 
         yield return new WaitForEndOfFrame(); 
+        //yield return new WaitForSeconds(5);
 
     
 
@@ -114,6 +117,7 @@ public class Capture0 : MonoBehaviour
     {
         //Texture2D photo2 = new Texture2D(webcamTexture.width, webcamTexture.height);
         photodis.texture = photo;
+        display.texture = photo;
         
 
        // photoframe.SetActive(true);

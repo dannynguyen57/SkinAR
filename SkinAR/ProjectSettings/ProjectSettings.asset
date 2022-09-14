@@ -141,9 +141,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
-  - {fileID: -7343130900682074259, guid: 3bc48fa04ca667342a5527a01ffb76de, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -898,11 +896,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 02c86a52-959d-4731-be69-be9d176b47c8
+  cloudProjectId: e4f8352c-a611-4757-9a4a-15f880090215
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: SkinAR (2)
-  organizationId: deakin-launchpad
+  projectName: SkinAR (1)
+  organizationId: vietngu2000vn
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
